@@ -14,9 +14,9 @@ pipeline {
             }
             steps {
                 script {
-                    app = docker.build("tungnc2012/train-schedule-lab")
+                    app = docker.build("tungnc2012/train-schedule")
                     app.inside {
-                        sh 'echo $(curl localhost:8082)'
+                        sh 'echo $(curl localhost:8080)'
                     }
                 }
             }
