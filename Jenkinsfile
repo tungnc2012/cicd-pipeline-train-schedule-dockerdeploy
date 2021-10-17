@@ -16,7 +16,7 @@ pipeline {
                 script {
                     app = docker.build("tungnc2012/train-scheduler")
                     app.inside {
-                        sh 'echo $(curl localhost:8081)'
+                        sh 'echo $(curl localhost:8080)'
                     }
                 }
             }
